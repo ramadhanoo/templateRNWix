@@ -7,10 +7,6 @@ import DefaultOptions from './Styles';
 RegisterComponent();
 
 RNNavigation.events().registerComponentDidAppearListener((nav) => {
-//   console.tron.send('state.action.complete', {
-//     name: `NAVIGATE/${nav.componentName}`,
-//     action: nav,
-//   });
   NavigationServices.setActiveNavigation(nav);
 });
 
@@ -38,4 +34,4 @@ RNNavigation.events().registerAppLaunchedListener(() => {
       },
     },
   });
-});
+})
