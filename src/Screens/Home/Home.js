@@ -1,22 +1,13 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/sort-comp */
-import React, {useEffect} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Linking,
-  FlatList,
-  RefreshControl,
-} from 'react-native';
+import React from 'react';
+import {FlatList, RefreshControl} from 'react-native';
 import styles from './Home.styles';
 import {useHome} from './useHome';
 import {BaseScreens, Header} from '../../Components/index';
 import ListComponent from './content/ListComponent/ListComponent';
 
 const Home = props => {
-  const {data, state, actions} = useHome();
-  const {showToast, onRefresh} = actions;
+  const {state, actions} = useHome();
+  const {onRefresh} = actions;
   const {themes} = state;
 
   return (

@@ -13,7 +13,7 @@ export const useHome = () => {
 
   useEffect(() => {
     dispatch(SampleActions.setDataSampleReq());
-  }, []);
+  }, [dispatch]);
 
   const onRefresh = () => {
     dispatch(SampleActions.setDataSampleReq());
